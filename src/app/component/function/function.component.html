@@ -1,0 +1,28 @@
+<p>function works!</p>
+<button (click)="add(3,5)">check1</button>
+<h1>{{add(2,7)}}</h1>
+
+
+<button (click)="sub(2,4)">check2</button>
+<h1>{{sub(2,3)}}</h1>
+
+
+<!-- <button (click)="multi(1,2,3)">check 3</button> -->
+
+<div>
+<input type="text" [(ngModel)]="name" >
+<input type="number" [(ngModel)]="password">
+<button (click)="submit()">click</button>
+</div >
+
+<thead>
+ <tr>
+    <th>name</th>
+    <th>password</th>
+ </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>{{name}}</td>
+    </tr>
+</tbody>

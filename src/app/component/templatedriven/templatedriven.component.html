@@ -1,0 +1,42 @@
+<p>templatedriven works!</p>
+<!-- <button (click)="navigate1()">click</button> -->
+
+
+<div class="container">
+    <div class="div">
+
+<div class="form">
+<input type="text" placeholder="name" [(ngModel)]="formData.name">
+<input type="number" placeholder="roll" [(ngModel)]="formData.roll">
+<button (click)="create()">click</button>
+</div>
+<div class="leftform">
+    <table>
+<thead>
+ <th>name</th>
+ <th>roll</th>
+</thead>
+<tbody>
+    <tr *ngFor="let user of users">
+        <td>{{user.name}}</td>
+        <td>{{user.roll}}</td>
+        <td><button (click)="editaction(user)">edit</button></td>
+        <td><button (click)="delete1(user)">delete</button></td>
+    </tr>
+</tbody>
+</table>
+
+
+<div class="editdialogbox" *ngIf="editdialogbox" [formGroup]="edit">
+   <input type="text " placeholder="name" formControlName="name">
+   <input type="number" placeholder="roll" formControlName="roll">
+   <button (click)="update()" >update</button>
+</div>
+</div>
+
+
+</div>
+</div>
+
+<button (click)="generateEmployeeId()">Generate Employee ID</button>
+<p *ngIf="employeeId">Employee ID: {{ employeeId }}</p>

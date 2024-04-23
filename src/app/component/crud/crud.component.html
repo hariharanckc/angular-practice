@@ -1,0 +1,48 @@
+<div class="container">
+    <form [formGroup]="create"  >
+        <input type="text" [(ngModel)]="name" formControlName="name" name="name">
+        <input type="number"[(ngModel)]="roll" formControlName="roll" name="roll">
+        <input type="number" [(ngModel)]="phone" formControlName="phone" name="phone">
+        <button (click)="submit()">create</button>
+    </form >
+
+<div>
+    <table>
+        <thead>
+            <th>name</th>
+            <th>roll</th>
+            <th>phone</th>
+            <th>delete</th>
+            <th>edit</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.data.name}}</td>
+                <td>{{user.data.roll}}</td>
+                <td>{{user.data.Phone}}</td>
+                <td><button (click)="delete(user)">delete</button></td>
+                <td><button (click)="editaction(user)">edit</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    
+</div>
+
+
+<form [formGroup]="edit"  >
+    <input type="text"  formControlName="name" name="name">
+    <input type="number" formControlName="roll" name="roll">
+    <input type="number"  formControlName="phone" name="phone">
+    <button (click)="update()">update</button>
+</form >
+<!-- <p>{{date|date : 'MM-dd-yy, h:mm a'}}</p>
+<p>{{number| number :'0.0-0'}}</p>
+<p>{{number| currency : 'INR':'code'}}</p>
+<p>{{json|json}}</p> -->
+<!-- {{arr[0]}} -->
+<!-- {{js|slice:1:2}} -->
+<!-- {{arr|slice:0}} -->
+
+<!-- {{json|keyvalue|json|uppercase}} -->
+

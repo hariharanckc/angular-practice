@@ -1,0 +1,54 @@
+.container{
+    height: 100vh;
+    width: 100vw;
+    /* background-color: red; */
+
+}
+.body{
+    height: 100vh;
+    width: 100vw;
+    /* background-color: orange; */
+    display: flex;
+}
+.left{
+    /* background-color: red; */
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.left form{
+    /* background-color: white; */
+height: 60vh;
+width: 40vw;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.left form input{
+    padding: 2vh;
+    margin: 2vh;
+}
+.right{
+    /* background-color: green; */
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.right form{
+    /* background-color: white; */
+height: 60vh;
+width: 40vw;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.right form input{
+    padding: 2vh;
+    margin: 2vh;
+}

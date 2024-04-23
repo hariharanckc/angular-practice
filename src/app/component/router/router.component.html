@@ -1,0 +1,10 @@
+<p>router works!</p>
+<div [routerLink]="['/test3']">test1</div> 
+
+<p>{{user.id}}</p>
+<p>{{user.name}}</p>
+
+<h1 [routerLink]="['/router',1,'change']"  [queryParams]="{page :1 ,search:'hari',path:'haran'}"  [fragment]="'load'">click</h1>
+
+
+<button (click)="getramdetails()">click</button>

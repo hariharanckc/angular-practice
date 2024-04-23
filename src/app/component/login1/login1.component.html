@@ -1,0 +1,29 @@
+<!-- <p>login1 works!</p> -->
+<div class="container">
+    <div class="body">
+<div class="left">
+    <h1>Template driven</h1>
+<form >
+    <label for="Tname">Name &nbsp;&nbsp;&nbsp;
+    <input type="text" id="Tname" [(ngModel)]="Tname" name="Tname " placeholder="username"  ></label>
+    <label for="Tpassword">password
+    <input type="text" id="Tpassword" [(ngModel)]="Tpassword" name="Tpassword" placeholder="password" (copy)="c($event)" (paste)="p($event)" (cut)="x($event)"></label>
+    <p>{{showerror}}</p>
+    <!-- {{Tname}}
+    <p>{{result}}</p> -->
+    <button (click)="submit()" >submit</button>
+</form>
+</div>
+<div class="right">
+    <h1>reactive form</h1>
+<form action="" [formGroup]="data"> 
+    <label for="">Name &nbsp;&nbsp;&nbsp;
+    <input type="text" formControlName="Rname" placeholder="username" ></label>
+    <label for="">Password
+    <input type="text" formControlName="Rpassword" placeholder="password" (clear)="x($event)" (copy)="c($event)" (paste)="p($event)"></label>
+    <p>{{showerror2}}</p>
+    <button (click)="submit1()" >submit</button> <!--[disabled]="data.invalid"-->
+</form>
+</div>
+</div>
+</div>

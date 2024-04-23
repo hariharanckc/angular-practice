@@ -1,0 +1,70 @@
+
+
+
+
+<div class="container">
+    <div class="body">
+        <p>container</p>
+<ng-container *ngTemplateOutlet="tmpl; context:{$implicit:students}" >
+
+</ng-container>
+<ng-template #tmpl let-t>
+  <div id="item"  *ngFor="let item of t">
+name:  {{item.name}}<br>
+roll:  {{item.roll}}
+
+  </div>
+
+</ng-template>
+
+<!-- Parent component template -->
+<div>
+    <!-- Using ng-template to define a template -->
+    <ng-template #myTemplate>
+      <p>This is a template content.</p>
+    </ng-template>
+  
+    <!-- Using ng-container and ngTemplateOutlet to render the template -->
+    <ng-container *ngTemplateOutlet="myTemplate"></ng-container>
+  </div>
+  
+
+</div>
+
+</div>
+
+
+
+
+<div>
+
+<!-- <ng-container *TemplateOutlet="temp; context:{$implicit:parents}">
+
+</ng-container>
+
+<ng-template #temp let-text>
+  <div *ngFor="let details of let-text ">
+    <div *ngIf="typeof details === 'object'">
+      Mother: {{ details.mothername }}
+      Father: {{ details.fathername }}
+    </div>
+
+</div>
+</ng-template> -->
+
+</div>
+
+<!-- 
+<div>
+    <div>
+    <ng-container *ngFor="let user of users">
+      <ng-container *ngTemplateOutlet="getUserTemplate(user.role); context: {$implicit: user}">
+      </ng-container>
+    </ng-container>
+  </div>
+  <ng-template #adminTemplate let-user>
+    <div>{{ user.name }} (Admin)</div>
+  </ng-template>
+  <ng-template #userTemplate let-user>
+    <div>{{ user.name }}</div>
+  </ng-template></div> -->

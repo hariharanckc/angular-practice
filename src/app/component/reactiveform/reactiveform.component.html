@@ -1,0 +1,24 @@
+<!-- <p>reactiveform works!</p> -->
+<div class="container">
+    <form [formGroup]="myForm" (ngSubmit)="onsubmit()">
+        <input type="text" formControlName="name" >
+        <input type="number" formControlName="roll">
+        <button type="submit">click</button>
+    </form>
+    <!-- <button (click)="check()">check</button> -->
+
+    <div class="table">
+        <table>
+            <th>user</th>
+            <th>roll</th>
+        </table>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.name}}</td>
+                <td>{{user.roll}}</td>
+            </tr>
+        </tbody>
+    
+    </div>
+</div>
+

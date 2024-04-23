@@ -1,0 +1,16 @@
+<p>crudcouchstructure works!</p>
+<form [formGroup]="myForm">
+    <input type="text" formControlName="password" >
+    <input type="number" formControlName="phonenum">
+    
+    <button (click)="submit()">click</button>
+</form>
+
+<input type="number" placeholder="phonenum" [(ngModel)]="phone" >
+<button (click)="read()">read</button>
+
+<div >
+<p>{{getpassword}}</p>
+</div>
+<h1>hai</h1>
+<!-- <h1 *ngFor="let u of getpassword">{{u.password}}</h1> -->

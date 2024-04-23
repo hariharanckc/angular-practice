@@ -1,0 +1,20 @@
+<p>parent works!</p>
+{{name}}
+
+<input type="text" [(ngModel)]="name">
+<app-child [parentname]="name"></app-child>
+<!-- <input type="text" [attr.value]="namd1"> -->
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<app-child (messageEvent)="receiveMessage($event)">hai</app-child>
+<p>{{ receivedMessage }}</p>
